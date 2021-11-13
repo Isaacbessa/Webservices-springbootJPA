@@ -3,10 +3,19 @@ package com.project.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 
-	
+@Id // chave primária / informar ao JPA
+@GeneratedValue(strategy = GenerationType.IDENTITY) // informar que a geração do valor do identificador único da entidade será gerenciada pelo provedor de persistência
+//Usado após o @Id
 	private Long id;
 	private String name;
 	private String email;
