@@ -37,5 +37,5 @@ public class UserResource {
 	public ResponseEntity<User> findEntity(@PathVariable long id){
 	User obj = service.findById(id);
 	return ResponseEntity.ok().body(obj);
-}
+ }
 }
